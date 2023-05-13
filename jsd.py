@@ -1,3 +1,4 @@
+
 import os
 import time
 from click import style
@@ -20,48 +21,48 @@ try:
     print(logo)
     domain=input("Enter URL to start scanning :- ")
     try:
-        with open("/home/"+user+"/"+".bashrc" , "a")as a:
+        with open("/home/"+user+"/"+".zshrc" , "a")as a:
                       b=a.write("sublist3r -d "+ domain)
                       a.close()
         sleep(1)
         os.system("gnome-terminal")
         sleep(1)
-        with open("/home/"+user+"/.bashrc" , "r")as a:
+        with open("/home/"+user+"/.zshrc" , "r")as a:
                       c=a.read()
                       c=c.replace("sublist3r -d ","dirsearch -u ")
-        with open("/home/"+user+"/.bashrc","w")as file:
+        with open("/home/"+user+"/.zshrc","w")as file:
                         file.write(c)
                         file.close()
         os.system("gnome-terminal")
         sleep(1)
-        with open("/home/"+user+"/.bashrc" , "r")as a:
+        with open("/home/"+user+"/.zshrc" , "r")as a:
                       c=a.read()
                       c=c.replace("dirsearch -u ","spiderfoot -s ")
-        with open("/home/"+user+"/.bashrc","w")as file:
+        with open("/home/"+user+"/.zshrc","w")as file:
                         file.write(c)
                         file.close()
         os.system("gnome-terminal")
         sleep(1)
-        with open("/home/"+user+"/"+".bashrc" , "r")as a:
+        with open("/home/"+user+"/"+".zshrc" , "r")as a:
                       c=a.read()
                       c=c.replace("spiderfoot -s ","photon --keys --dns -u ")
-        with open("/home/"+user+"/.bashrc","w")as file:
+        with open("/home/"+user+"/.zshrc","w")as file:
                         file.write(c)
                         file.close()
         os.system("gnome-terminal")
         sleep(1)
-        with open("/home/"+user+"/.bashrc" , "r")as a:
+        with open("/home/"+user+"/.zshrc" , "r")as a:
                       c=a.read()
                       c=c.replace("photon --keys --dns -u ","arjun -u https://")
-        with open("/home/"+user+"/.bashrc","w")as file:
+        with open("/home/"+user+"/.zshrc","w")as file:
                         file.write(c)
                         file.close()
         os.system("gnome-terminal")
         sleep(1)
-        with open("/home/"+user+"/.bashrc" , "r")as a:
+        with open("/home/"+user+"/.zshrc" , "r")as a:
                       c=a.read()
                       c=c.replace("arjun -u "+"https://"+domain," ")
-        with open("/home/"+user+"/.bashrc","w")as file:
+        with open("/home/"+user+"/.zshrc","w")as file:
                         file.write(c)
                         file.close()
     except:
